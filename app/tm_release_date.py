@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from flask import Blueprint, abort, current_app, jsonify, request
+from markupsafe import escape
 
 from app.util import get_current_url
 
@@ -74,7 +75,7 @@ def delete_tm_release_date_from_questionnaire(questionnaire):
         abort(404, description=f"No data found for {questionnaire}")
     current_app.datastore.delete_tm_release_date(questionnaire)
     current_app.logger.info(f"{questionnaire} deleted")
-    return f"Deleted {questionnaire}", 204
+    return f"Deleted {escape(questionnaire)}", 204
 
 
 def get_formatted_date(request_body):
