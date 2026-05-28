@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from flask import Blueprint, abort, current_app, jsonify, request
+
 from markupsafe import escape
 
 from app.util import get_current_url
