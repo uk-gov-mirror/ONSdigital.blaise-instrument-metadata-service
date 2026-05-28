@@ -22,6 +22,7 @@ phonenumbers = "^8.12.46"
 google-cloud-logging = "^3.11.4"
 dataclasses-json = "^0.5.7"
 dataclass-wizard = "^0.22.1"
+pygments = ">=2.20.0"
 
 [tool.poetry.group.dev.dependencies]
 black = ">=25.1,<27.0"
